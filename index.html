@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hellow</h1>
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    <!-- client message get from client side........................................ -->
+    <!-- <script>
+        var socket = io();
+        socket.on('myCustomeEvent',(data)=>{
+            document.write(`message: ${data.description)
+        })
+    </script> -->
+
+    <!---client send messagr from server side........................ -->
+    <!-- <script>
+        var socket = io();
+        socket.emit("myCustomeEventFromClientSide",{description:'helloo from the client side'})
+    </script> -->
+
+    <!---Broadcast........................ -->
+    <!-- <script>
+        // var socket = io('/custome-namespace')
+        var socket = io();
+        // socket.on('broadcast',(data)=>{
+        socket.on('newuserconnected',(data)=>{
+            document.body.innerHTML ='';
+            document.write(`${data.message}`)
+        })
+    </script> -->
+
+
+    <!-- room.................................... -->
+    <script>
+         var socket = io();
+        socket.on('connectedRoom',(data)=>{
+            document.body.innerHTML = '';
+            document.write(`${data}`)
+        })
+    </script>
+
+</body>
+
+</html>
